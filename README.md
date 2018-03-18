@@ -28,7 +28,7 @@ Here is how to use it.
 ## Notice
 
 1. The .jar file will create a "logs" directory in its folder to store your file.
-2. You can commit and push your files to gitlab or github to store.
+2. You can commit and push your files to gitlab or github.
 
 
 ## Usage
