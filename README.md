@@ -35,10 +35,10 @@ Here is how to use it.
 
 1. In the Editor window(the hot key in windows is control)
 
-    - command + s : save file
-    - command + d : save file and exit
-    - command + e : exit to chapter list
+    command + s : save file
+    command + d : save file and exit
+    command + e : exit to chapter list
 
 2. In any window other than password input window
 
-    - command + l : lock, and direct to password input window
+    command + l : lock, and direct to password input window
