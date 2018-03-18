@@ -39,7 +39,7 @@ public class Main extends Application {
         Manager.fileHandler=fileHandler;
         gridPane.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());
         prison.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());
-        primaryStage.setTitle("My Prison");
+        primaryStage.setTitle("Aida");
         primaryStage.addEventFilter(KeyEvent.KEY_TYPED,event -> {
             if(event.isMetaDown()&&Manager.logined){
                 if(event.getCharacter().equals("l")){
