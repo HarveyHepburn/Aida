@@ -1,0 +1,32 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<GridPane fx:controller="Aida.Controller"
+          styleClass="gridP"
+          fx:id="gridP"
+          stylesheets="/Aida/style.css"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" minWidth="700" prefWidth="1000"
+          prefHeight="700">
+    <GridPane vgap="10" fx:id="g1" visible="false" GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <TextField prefHeight="40" fx:id="title" alignment="CENTER" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   styleClass="title"/>
+        <TextArea fx:id="textarea" GridPane.rowIndex="1" GridPane.columnIndex="0" minWidth="700" prefHeight="700"
+                  prefWidth="1000" styleClass="texts">
+        </TextArea>
+    </GridPane>
+    <GridPane visible="false" fx:id="g2" vgap="30" GridPane.rowIndex="0" GridPane.columnIndex="0" alignment="CENTER" styleClass="ChapterList">
+
+
+    </GridPane>
+    <GridPane alignment="center" fx:id="g3" GridPane.rowIndex="0" GridPane.columnIndex="0" vgap="50">
+        <Text GridPane.rowIndex="0" GridPane.columnIndex="0" textAlignment="CENTER" text="PASSWORD" wrappingWidth="300"
+              styleClass="label"/>
+        <PasswordField GridPane.rowIndex="1" fx:id="pwd" GridPane.columnIndex="0" alignment="CENTER" styleClass="title" prefWidth="300"
+                       minWidth="300"/>
+    </GridPane>
+</GridPane>
