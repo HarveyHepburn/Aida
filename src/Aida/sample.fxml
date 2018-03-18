@@ -2,11 +2,9 @@
 
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
-<GridPane fx:controller="Aida.Controller"
+<GridPane
           styleClass="gridP"
           fx:id="gridP"
           stylesheets="/Aida/style.css"
