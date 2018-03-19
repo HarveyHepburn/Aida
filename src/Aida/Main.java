@@ -36,15 +36,15 @@ public class Main extends Application {
         g1 = (GridPane) root.lookup("#g1");
         g2 = (GridPane) root.lookup("#g2");
         g3 = (GridPane) root.lookup("#g3");
-        Manager.fileHandler=fileHandler;
+        Manager.fileHandler = fileHandler;
         gridPane.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());
         prison.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());
         primaryStage.setTitle("Aida");
-        primaryStage.addEventFilter(KeyEvent.KEY_TYPED,event -> {
-            if(event.isMetaDown()&&Manager.logined){
-                if(event.getCharacter().equals("l")){
+        primaryStage.addEventFilter(KeyEvent.KEY_TYPED, event -> {
+            if (event.isMetaDown() && Manager.logined) {
+                if (event.getCharacter().equals("l")) {
                     clearEditior();
-                    Manager.logined=false;
+                    Manager.logined = false;
                     Encrypter.setKeyValue("");
                     g1.setVisible(false);
                     g2.setVisible(false);
@@ -96,7 +96,8 @@ public class Main extends Application {
         g1.setVisible(false);
         g2.setVisible(true);
     }
-    private void clearEditior(){
+
+    private void clearEditior() {
         prison.clear();
         title.clear();
     }

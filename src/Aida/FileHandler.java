@@ -3,6 +3,7 @@ package Aida;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 public class FileHandler {
-    static String folder = "logs";
+    static public String folder = System.getProperty("user.home")+"/logs";
     static SimpleDateFormat timeFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 
     FileHandler() {
@@ -70,9 +71,9 @@ public class FileHandler {
         List<String> chapterList = new ArrayList<>();
         list = new ArrayList<>();
         try {
-            Files.walk(Paths.get(folder + "/"))
-                    .filter(Files::isRegularFile)
-                    .forEach(file -> {
+            Files.walk(Paths.get(folder + "/"),1, FileVisitOption.FOLLOW_LINKS)
+                    .filter(Files::isRegularFile).sorted()
+                    .forEachOrdered(file -> {
                         try {
                             if(file.getFileName().toString().substring(0,12).chars().allMatch(Character::isDigit)){
                                 list.add(file.getFileName().toString());
